@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+}
+
+.home-content .emoji {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.start-button:active {
+  transform: translateY(0);
+}
+
+button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+h2 {
+  color: #667eea;
+  margin-bottom: 20px;
+}
+
+/* 추가 스타일 */
+.info-box {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 32px 0;
+  border: 2px solid #667eea;
+  text-align: left;
+}
+
+.info-box h3 {
+  color: #667eea;
+  margin-bottom: 16px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+  color: #666;
+  line-height: 1.8;
+}
+
+.info-text {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #999;
+  line-height: 1.6;
+}
+
+/* 퀴즈 페이지 스타일 */
+.quiz-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.5s ease;
+}
+
+.question-card {
+  background: #f8f9ff;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: left;
+}
+
+.question-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.options {
+  margin-bottom: 32px;
+}
+
+.option {
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+  background: white;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+}
+
+.option.selected {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.next-button {
+  display: block;
+  margin: 0 auto;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.next-button:not(:disabled) {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* 결과 페이지 스타일 */
+.result-header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.result-emoji {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.result-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.result-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.result-type {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 32px;
+}
+
+.result-section {
+  background: #f8f9ff;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.result-section h3 {
+  color: #667eea;
+  margin-bottom: 16px;
+}
+
+.result-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.result-section li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-section li:last-child {
+  border-bottom: none;
+}
+
+.result-section p {
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  line-height: 1.8;
+}
+
+.result-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.result-buttons button:first-child {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.result-buttons button:last-child {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
