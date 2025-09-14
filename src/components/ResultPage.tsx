@@ -1,12 +1,11 @@
-import React from 'react';
-import { MBTIResult } from '../types';
+import type { MBTIResult } from '../types';
 
 interface ResultPageProps {
   result: MBTIResult;
   onRestart: () => void;
 }
 
-const ResultPage: React.FC<ResultPageProps> = ({ result, onRestart }) => {
+const ResultPage = ({ result, onRestart }: ResultPageProps) => {
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({

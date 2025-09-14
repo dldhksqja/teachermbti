@@ -1,4 +1,4 @@
-import { Answer, MBTIType } from '../types';
+import type { Answer, MBTIType } from '../types';
 
 export function calculateMBTI(answers: Answer[]): MBTIType {
   const scores = {

@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Container, 
-  Title, 
   ProgressBar, 
   QuestionCard, 
   OptionButton, 
   Button 
 } from '../styles/GlobalStyles';
 import { questions } from '../data/questions';
-import { Answer } from '../types';
+import type { Answer } from '../types';
 
-const Quiz: React.FC = () => {
+const Quiz = () => {
   const navigate = useNavigate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Answer[]>([]);

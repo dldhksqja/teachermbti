@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { questions } from '../data/questions';
-import { Answer } from '../types';
+import type { Answer } from '../types';
 import { calculateMBTI } from '../utils/mbtiCalculator';
 import { mbtiResults } from '../data/results';
 
@@ -8,7 +8,7 @@ interface QuizPageProps {
   onComplete: (result: any) => void;
 }
 
-const QuizPage: React.FC<QuizPageProps> = ({ onComplete }) => {
+const QuizPage = ({ onComplete }: QuizPageProps) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [selectedOption, setSelectedOption] = useState<'A' | 'B' | null>(null);

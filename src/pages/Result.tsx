@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -7,11 +7,11 @@ import {
   ResultCard, 
   ResultSection 
 } from '../styles/GlobalStyles';
-import { Answer, MBTIResult } from '../types';
+import type { Answer, MBTIResult } from '../types';
 import { calculateMBTI } from '../utils/mbtiCalculator';
 import { mbtiResults } from '../data/results';
 
-const Result: React.FC = () => {
+const Result = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [result, setResult] = useState<MBTIResult | null>(null);

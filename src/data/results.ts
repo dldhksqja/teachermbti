@@ -1,4 +1,4 @@
-import { MBTIResult } from '../types';
+import type { MBTIResult } from '../types';
 
 export const mbtiResults: Record<string, MBTIResult> = {
   ENFP: {

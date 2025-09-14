@@ -1,4 +1,4 @@
-import { Question } from '../types';
+import type { Question } from '../types';
 
 export const questions: Question[] = [
   // 수업 상황 (4문항)
